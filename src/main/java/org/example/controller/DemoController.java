@@ -14,13 +14,9 @@ public class DemoController {
 
     @RequestMapping(value = "getDate",method = RequestMethod.GET)
     public ModelAndView test() {
-
         ModelAndView modelAndView = new ModelAndView();
-
         modelAndView.addObject("date", new Date());
-
-        modelAndView.setViewName("/WEB-INF/jsp/success.jsp");
-
+        modelAndView.setViewName("success");
         return modelAndView;
 
     }
