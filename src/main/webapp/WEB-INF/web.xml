@@ -4,10 +4,6 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
-
-
-
   <servlet>
     <servlet-name>springmvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -31,14 +27,10 @@
             为什么不拦截.jsp呢？
                 因为父web.xml中有一个JspServlet，这个servlet拦截.jsp文件，而我们并没有覆写这个配置，
                 所以springmvc此时不拦截jsp，jsp的处理交给了tomcat
-
-
             如何解决/拦截静态资源这件事？
-
-
       方式三：/* 拦截所有，包括.jsp
 -->
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 
 </web-app>
