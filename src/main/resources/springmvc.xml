@@ -15,8 +15,10 @@
     <!--配置包扫描路径-->
     <context:component-scan base-package="org.example.controller"/>
 
-
-
+    <mvc:interceptors>
+        <bean class="org.example.interceptor.MyInterceptor01"/>
+        <bean class="org.example.interceptor.MyInterceptor012"/>
+    </mvc:interceptors>
 
     <!--配置springmvc的视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
